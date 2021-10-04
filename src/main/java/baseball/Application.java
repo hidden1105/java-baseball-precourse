@@ -1,16 +1,16 @@
 package baseball;
 
-import nextstep.utils.Console;
-
 public class Application {
     private static String answer = "111";
 
     public static void main(String[] args) {
         boolean isIng = true;
 
+        Player player = new Player();
+
         while (isIng) {
             System.out.print("숫자를 입력해주세요 :");
-            String input = Console.readLine();
+            String input = player.play();
 
             String result = getResult(input);
             if (result.equals("3스트라이크")) {
