@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.regex.Pattern;
 
 public class Player {
-    private final String threeDigitExp = "^[0-9]{3}";
+    private final String THREE_DIGIT_EXP = "^[0-9]{3}";
 
     public String play() {
         String input = Console.readLine();
@@ -20,7 +20,7 @@ public class Player {
     }
 
     private void validate(String input) {
-        if (!Pattern.matches(threeDigitExp, input)) {
+        if (!Pattern.matches(THREE_DIGIT_EXP, input)) {
             throw new IllegalArgumentException("[ERROR] 0~9 3자리 숫자만 입력 가능합니다.");
         }
         checkDuplicateInput(input);
@@ -36,6 +36,4 @@ public class Player {
             }
         }
     }
-
-
 }
