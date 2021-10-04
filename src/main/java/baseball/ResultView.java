@@ -3,6 +3,7 @@ package baseball;
 public class ResultView {
     public void view(Result result) {
         if (result.isFinish()) {
+            System.out.println(result.getStrike() + "스트라이크 ");
             System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 끝" );
             return;
         }
