@@ -20,10 +20,14 @@ public class Player {
     }
 
     private void validate(String input) {
+        checkThreeDigit(input);
+        checkDuplicateInput(input);
+    }
+
+    private void checkThreeDigit(String input) {
         if (!Pattern.matches(THREE_DIGIT_EXP, input)) {
             throw new IllegalArgumentException("[ERROR] 0~9 3자리 숫자만 입력 가능합니다.");
         }
-        checkDuplicateInput(input);
     }
 
     private void checkDuplicateInput(String input) {
