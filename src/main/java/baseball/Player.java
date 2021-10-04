@@ -10,7 +10,12 @@ public class Player {
 
     public String play() {
         String input = Console.readLine();
-        validate(input);
+        try {
+            validate(input);
+        } catch (IllegalArgumentException ex) {
+            System.out.println(ex.getMessage());
+        }
+
         return input;
     }
 
