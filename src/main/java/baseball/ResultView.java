@@ -16,5 +16,6 @@ public class ResultView {
         if (result.isExist(result.getBall())) {
             System.out.println(result.getBall() + "볼");
         }
+        System.out.println("");
     }
 }
