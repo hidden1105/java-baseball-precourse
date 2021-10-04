@@ -25,4 +25,12 @@ public class Result {
     public boolean isFinish() {
         return strike == THREE_STRIKE;
     }
+
+    public boolean isExist(int count) {
+        return count > 0;
+    }
+
+    public boolean isNothing() {
+        return strike == 0 && ball == 0;
+    }
 }
